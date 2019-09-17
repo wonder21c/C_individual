@@ -34,7 +34,7 @@ int main() {
 		puts("error");
 		exit(0);
 	}
-	fscanf_s(fp, "&d &d", &a, &b);
+	fscanf_s(fp, "%d %d", &a, &b);
 	fclose(fp);
 	printf("%d \n", add(a, b));
 }
