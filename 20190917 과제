@@ -1,0 +1,68 @@
+1번 명령창에서 계산기를 구현하시오. 매개변수가 모자라면 프로그램을 종료하시오.
+#include <stdio.h> 
+#include<stdlib.h> 
+int main(int c, char* v[]) {
+	int a, b, s, o;
+	if (c < 4) {
+		printf("warning.\n");
+		exit(0);
+	}
+	a = atoi(v[1]);
+	b = atoi(v[3]);
+	o = v[2][0];
+
+	switch (o) {
+	case '+':s = a + b; break;
+	case '-':s = a - b; break;
+	case '*':s = a * b; break;
+	case '/':s = a / b; break;
+	default:break;
+	}
+	printf("%d%c%d=%d\n", a, o, b, s);
+}
+
+2번 my.txt 에 첫줄에 33 다음 줄에 22들어 있다. 이를 읽고 add() 함수를 이용하여 더하고 결과를 출력하시오. 반드시 오류에 대해 처리를 포함하시오.
+#include <stdio.h>
+#include<stdlib.h>
+int add(int a, int b) {
+	return a + b;
+}
+int main() {
+	int a, b;
+	FILE* fp = fopen("text1.txt", "r");
+	if (fp == NULL) {
+		puts("error");
+		exit(0);
+	}
+	fscanf_s(fp, "&d &d", &a, &b);
+	fclose(fp);
+	printf("%d \n", add(a, b));
+}
+
+3번 배열을 이용해 문자열 출력하기
+  #include<stdio.h>
+    int main() {
+    char c1[6] = "apple";
+    char c2[5] = "ciwi";
+    char c3[7] = "banana";
+    printf("%s\n%s\n%s\n", c1,c2,c3); }*/
+
+4번 두명의 구조체 정보를 배열에 초기화하고 포인터로 화면에 출력하시오.
+#include <stdio.h>
+#include <string.h>
+struct user {
+	int a;
+	char name[80];
+} we[2] = { { 18,"sonjw" }, { 20,"jwson" } };
+int main() {
+	struct user me = { 18,"sonjw" };
+	struct user he = { 20,"jwson" };
+	struct user* p;
+	p = we;
+	printf("%d %s\n", p->a, p->name);
+	p++;
+	printf("%d %s\n", p->a, p->name);
+}
+
+
+
