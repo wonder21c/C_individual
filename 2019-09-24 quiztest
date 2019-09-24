@@ -1,0 +1,114 @@
+1번구조화된 언어이고  이식성, 확장성, 생산성이 특징이다.
+     장점은 실행속도가 빠르고 메모리를 효율적으로 이용할 수 있다.
+
+2번 C언어를 라즈베리 파이에서 활용할 수 있다.
+3번
+#include <stdio.h>
+void main() {
+	float a, b, c;
+	a = 3.5;
+	b = 5.3;
+	c = a + b;
+	printf("%f\n", c); 
+}
+
+4번
+#include <stdio.h>
+void main() {
+	float a, b, c;
+	scanf_s("%f%f", &a, &b); 
+	c= a + b;
+	printf("%f\n", c); 
+}
+
+5번
+#include <stdio.h>
+float add(float a, float b) {
+	return a + b;
+}
+void main() {
+	float a, b, c;
+	a = 3.5;
+	b = 5.3;
+	printf("%f\n", add(a,b));
+}
+
+6번
+#include <stdio.h>
+#include <stdlib.h>
+
+int add(int a, int b) {
+	return a + b;
+}
+
+int main() {
+	int a, b;
+	FILE* fp;
+	fp= fopen("my.txt", "r");
+	if (fp == NULL) {
+		puts("error");
+		exit(0);
+	}
+	fscanf_s(fp, "%d%d", &a, &b);
+	printf("%d\n", add(a, b));
+}
+
+7번
+#include <stdio.h>
+int main() {
+	int i;
+	const char* c[3] = { "Banana","Orange","Kiwi" };
+	for (i = 0; i < 3; i++)
+		printf("%s\n", c[i]);
+}
+
+8번
+#include <stdio.h>
+#include<stdlib.h>
+int main(int c, char* v[]) {
+	int a, b, s, o;
+	if (c < 4) {
+		printf("warning");
+		exit(0);
+	}
+	a = atoi(v[1]);
+	b = atoi(v[3]);
+	o = v[2][0];
+
+	switch (o) {
+	case '*':s = a * b; break;
+	}
+	printf("%d%c%d=%d\n", a, o, b, s);
+}
+
+9번
+#include <stdio.h>
+struct user {
+	char name[80];
+	int age;	
+	char email[80];
+};
+void main() {
+	int i;
+	struct user we[2] = { {"son",20,"20191126@anu.com"},
+	{"jeong",19,"wonder21c@naver.com"} };
+	for (i = 0; i < 2; i++)
+		printf("%s %d %s\n", we[i].name, we[i].age, we[i].email);
+}
+10번
+#include <stdio.h>
+struct user {
+	char name[80];
+	int age;
+	char email[80];
+}we[2] = { {"son",20,"20191126@anu.com"},{"jeong",19,"wonder21c@naver.com"} };
+void pr(struct user* p) {
+	printf("%s %d %s\n", p->name, p->age, p->email);
+	p++; //
+	printf("%s %d %s\n", p->name, p->age, p->email);
+}
+
+int main() {
+	pr(we);
+}
+
