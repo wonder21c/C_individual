@@ -70,3 +70,6 @@ int main(void) {
 	print(r);
 }
 ```
+<div>
+	<img width="700" , src ="https://user-images.githubusercontent.com/50861700/68188321-39e22f00-ffec-11e9-8620-89dc2d85a2b3.png">
+	</div>
