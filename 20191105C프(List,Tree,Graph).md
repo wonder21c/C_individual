@@ -70,6 +70,12 @@ int main(void) {
 	print(r);
 }
 ```
+> ## Tree 이해사진
 <div>
-	<img width="700" , src ="https://user-images.githubusercontent.com/50861700/68188321-39e22f00-ffec-11e9-8620-89dc2d85a2b3.png">
-	</div>
+<img width="700" , src ="https://user-images.githubusercontent.com/50861700/68188321-39e22f00-ffec-11e9-8620-89dc2d85a2b3.png">
+</div>
+
+> ## Tree 종류 
+<div>
+<img width="700", src = "https://user-images.githubusercontent.com/50861700/68191253-7add4200-fff2-11e9-888c-9a9f019d0884.png">
+</div>
