@@ -132,3 +132,8 @@ int main() {
 	printf("total search : %d\n", cnt);
 }
 ```
+
+ > ## graph의 종류
+<div>
+	<img width ="700" , src ="https://github.com/wonder21c/C_individual/issues/4">
+	</div>
