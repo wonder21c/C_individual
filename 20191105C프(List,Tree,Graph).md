@@ -135,5 +135,5 @@ int main() {
 
  > ## graph의 종류
 <div>
-	<img width ="700" , src ="https://github.com/wonder21c/C_individual/issues/4">
+	<img width ="700" , src ="https://user-images.githubusercontent.com/50861700/68191293-97797a00-fff2-11e9-80e9-fa2f31f08e35.png">
 	</div>
